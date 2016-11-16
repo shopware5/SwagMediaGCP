@@ -1,0 +1,20 @@
+{
+    "name":"shopwarelabs/swag-media-gcp",
+    "type": "shopware-frontend-plugin",
+    "description": "Shopware media adapter to store media files on Google Cloud Storage.",
+    "comment": "league/flysystem and guzzlehttp/guzzle are provided by shopware",
+    "keywords": ["shopware", "gcp", "google cloud"],
+    "replace": {
+        "league/flysystem": "~1.0",
+        "guzzlehttp/guzzle": "~5.1"
+    },
+    "config": {
+    	"optimize-autoloader": true
+	},
+    "archive": {
+    	"exclude": ["/shopwarelabs-swag-media-gcp-*.*", "/.git", "/.gitignore", "!/vendor"]
+    },
+    "require": {
+        "superbalist/flysystem-google-storage": "^3.0"
+    }
+}
