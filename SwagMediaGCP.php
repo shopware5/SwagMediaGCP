@@ -8,7 +8,10 @@
  */
 
 namespace SwagMediaGCP;
-require __DIR__. '/vendor/autoload.php';
+
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
 
 use Google\Cloud\Storage\StorageClient;
 use League\Flysystem\AdapterInterface;
@@ -17,6 +20,9 @@ use Superbalist\Flysystem\GoogleStorage\GoogleStorageAdapter;
 
 class SwagMediaGCP extends Plugin
 {
+    /**
+     * {@inheritdoc}
+     */
     public static function getSubscribedEvents()
     {
         return [
